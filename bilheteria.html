@@ -1,0 +1,46 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingressos Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva de Ingresso para Filme</h1>
+        <form id="formReserva">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="filme">Seleção de Filme:</label>
+            <select id="filme" name="filme">
+                <option value="vingadores">Vingadores</option>
+                <option value="reileao">O Rei Leão</option>
+                <option value="barbie">Barbie</option>
+            </select>
+
+            <label for="ingressos">Número de Ingressos:</label>
+            <input type="number" id="ingressos" name="ingressos" min="1" max="10" required>
+
+            <label for="cartao">Número do Cartão de Crédito:</label>
+            <input type="text" id="cartao" name="cartao" pattern="\d{4} \d{4} \d{4} \d{4}" placeholder="XXXX XXXX XXXX XXXX" required>
+
+            <label for="data">Data do Filme:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label>
+                <input type="checkbox" id="termos" required> Aceito os Termos e Condições
+            </label>
+
+            <button type="submit">Reservar Ingresso</button>
+        </form>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
